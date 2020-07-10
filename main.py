@@ -19,17 +19,15 @@ class Handler(FileSystemEventHandler):
             if len(extension) > 1:
                 if (extension[1].lower() = "jpg" or extension[1].lower() = "png" or extension[1].lower() = "svg"):
                     file = folder_track + "/" + filename
-                    new_path = folder_dest_photo + "/" + filename
+                    new_path = folder_dest + "/Photos/" + filename
                     os.rename(file, new_path)
                 elif (extension[1].lower() = "mp3" or extension[1].lower() = "wav" or extension[1].lower() = "aac")
                     file = folder_track + "/" + filename
-                    new_path = folder_dest_music + "/" + filename
+                    new_path = folder_dest + "/Music/" + filename
                     os.rename(file, new_path)
 
 folder_track =
-folder_dest_photo =
-folder_dest_video =
-folder_dest_music =
+folder_dest =
 
 handle = Handler()
 observer = Observer()
